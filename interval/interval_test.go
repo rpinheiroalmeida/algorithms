@@ -4,10 +4,10 @@ import "testing"
 
 func TestIsOverlap(t *testing.T) {
 	cases := []struct {
-		x interval
-		y interval
+		x pair
+		y pair
 	}{
-		{interval{-4, 2}, interval{1, 5}},
+		{pair{-4, 2}, pair{1, 5}},
 	}
 
 	for _, c := range cases {
@@ -21,10 +21,10 @@ func TestIsOverlap(t *testing.T) {
 
 func TestIsNotOverlap(t *testing.T) {
 	cases := []struct {
-		x interval
-		y interval
+		x pair
+		y pair
 	}{
-		{interval{-4, 2}, interval{3, 5}},
+		{pair{-4, 2}, pair{3, 5}},
 	}
 
 	for _, c := range cases {
