@@ -18,7 +18,3 @@ fun minimumLoss(price: Array<Long>): Int {
 
     return minimumLoss.toInt()
 }
-
-//20, 15, 8, 2, 12
-//20, 15, 12, 8, 2
-//20, 7, 8, 2, 5
