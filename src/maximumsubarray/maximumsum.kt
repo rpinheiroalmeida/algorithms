@@ -15,7 +15,6 @@ fun maximumSum(a: Array<Long>, m: Long): Long {
     var ret:Long = prefix.max()!!
 
     var tree: TreeSet<Long> = TreeSet()
-    tree.addAll(prefix)
 
     a.indices.forEach {
         val left = tree.higher(prefix[it])
@@ -27,10 +26,3 @@ fun maximumSum(a: Array<Long>, m: Long): Long {
 
     return ret
 }
-
-//    for (i in 0..n-1) {
-//        for (j in i-1 downTo  0) {
-//            ret = max(ret, (prefix[i] - prefix[j] + m) % m)
-//        }
-//        ret = max(ret, prefix[i])
-//    }
